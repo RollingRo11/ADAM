@@ -9,7 +9,7 @@ Read the paper [here!](https://arxiv.org/abs/1412.6980)
 
 ## Paper Implementation Overview:
 
-The important part of the implementation lies in [`optimizer.py`](). I used Claude to generate method stubs and comment documentation, so I could approach this like an assignment! The optimizer is meant to be a drop-in replacement, so you can swap out my optimizer for the official PyTorch one, or any other one in [`main.py`]()!
+The important part of the implementation lies in [`optimizer.py`](https://github.com/RollingRo11/ADAM/blob/main/optimizer.py). I used Claude to generate method stubs and comment documentation, so I could approach this like an assignment! The optimizer is meant to be a drop-in replacement, so you can swap out my optimizer for the official PyTorch one, or any other one in [`main.py`](https://github.com/RollingRo11/ADAM/blob/main/main.py)!
 
 **The `update_parameter()` function strictly follows the paper, here's how I implemented each step:**
 1) $m_t \leftarrow \beta_1 \cdot m_{t-1} + (1-\beta_1) \cdot g_t \text{ (Update biased first moment estimate)}$
@@ -60,7 +60,7 @@ Epoch 5: loss: 0.1049 | accuracy: 96.77%
 Test accuracy: 96.97%
 ```
 
-### Network with my implementation of Adam
+### Network with my implementation of Adam (learning_rate=0.001)
 ```
 Epoch 1: loss: 0.2176 | accuracy: 92.31%
 Epoch 2: loss: 0.1392 | accuracy: 95.51%
